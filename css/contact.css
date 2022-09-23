@@ -1,0 +1,259 @@
+/*リセットcss↓*/
+
+/*----リセットcss*----/
+
+/*デザインcss↓*/
+.box_con {
+  max-width: 900px;
+  margin: 0  auto;
+}
+@media only screen and (max-width: 768px) {
+  .box_con {
+    width: 95%;
+  }
+}
+.box_con form {
+  width: 100%;
+}
+.box_con form table {
+  width: 100%;
+}
+.box_con form table tr {
+  position: relative;
+}
+.box_con form table tr:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  border-bottom: dotted #cdcdcd 1px;
+}
+.box_con form table tr th {
+  width: 30%;
+  font-weight: normal;
+  padding: 1em .5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .box_con form table tr th {
+    text-align: center;
+    width: 100%;
+    display: block;
+    background: #97ae88;
+    padding: .8em .2em;
+    color: #fff;
+  }
+}
+.box_con form table tr th span {
+  background: #cd6f55;
+  padding: 0 .3em;
+  color: #fff;
+  margin-left: .5em;
+  float: right;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.box_con form table tr td {
+  padding: 1em .5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 768px) {
+  .box_con form table tr td {
+    padding: 1.5em .5em;
+    display: block;
+    width: 100%;
+  }
+}
+.box_con form table tr .box_br {
+  display: block;
+}
+.box_con form table tr select {
+  border: 1px solid #97ae88;
+}
+.box_con form table tr label input {
+  cursor: pointer;
+  display: none;
+  vertical-align: middle;
+}
+.box_con form table tr .radio02-input + label {
+  padding-left: 23px;
+  margin-right: 20px;
+  position: relative;
+}
+.box_con form table tr .radio02-input + label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.box_con form table tr .radio02-input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background: #97ae88;
+  border-radius: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.box_con form table tr select, .box_con form table tr input, .box_con form table tr textarea {
+  width: 100%;
+  height: 3em;
+  padding: .5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.box_con form table tr textarea {
+  height: 10em;
+}
+
+/*プライバシーのデザインcss↓*/
+
+
+.box_check {
+  text-align: center;
+  margin: 1em auto;
+}
+.box_check label {
+  display: inline-block;
+}
+.box_check label span {
+  margin-left: .3em;
+}
+
+.btn_contact {
+ width: 200px;
+  display: inline-block;
+  background: #006600;
+  padding: .5em 4em;
+  color: #ddd;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+.btn_contact:hover {
+  background: green;
+  color: white;
+}
+
+.box_btn_contact{
+text-align: center;
+}
+}
+.btn_contact:hover {
+  background: #003300;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+.btn-wrap-pc-sp {
+  max-width: 435px;
+  margin: 0 auto 20px;
+}
+
+a.btn-pc-sp {
+  line-height: 1.4;
+
+  width: 49.5%;
+  padding: 1.25rem 0;
+
+  color: #ffff;
+}
+
+
+
+a.btn--tel {
+  display: block;
+
+  margin-top: 15px;
+  padding: 1rem 0;
+
+  color: #fff;
+  background: #094;
+  -webkit-box-shadow: 0 5px 0 #008039;
+  box-shadow: 0 5px 0 #008039;
+}
+
+a.btn--tel i {
+  font-size: 2rem;
+}
+a.btn--tel i.fa-position-left {
+  font-size: 3rem;
+  left: 2rem;
+}
+a.btn--tel .number {
+  line-height: 1;
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 2rem;
+  letter-spacing: 0;
+  color: #094;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+a.btn--tel:hover {
+  color: #fff;
+}
+.fa-position-left {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 1rem;
+}
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
+}
