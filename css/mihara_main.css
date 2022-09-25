@@ -193,7 +193,33 @@ p.maru{
   transform: rotate(45deg) translate(-8px, -8px);
 }
 /*<===========NAVB MENU END===========>>*/
+/*<===========NAVB MENU BOTTOM START===========>>*/
+.bottom-navbar{
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: #00cc5b;
+  display: none;
+z-index: 99;
 
+}
+.bottom-navbar a{
+font-size: 14px;
+color: #EEEEEE;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.bottom-navbar a:hover{
+ background-color: white;
+ color: #006633;
+
+  }
+  .bottom-icon{
+display: none;
+  }
+/*<===========NAVB MENU BOTTOM THE END===========>>*/
 /*<============animation waves START ===========>*/
 
 div.box_img_header_homepage{
@@ -265,9 +291,9 @@ div.box_table_time_content{
 	float: left;
 	width: 80%;
 }
-.col_90{
-	float: left;
-	width: 90%;
+.col_full{
+
+	width: 100%;
 
 }
 .mgt-18{
@@ -712,9 +738,12 @@ section.card {
 
 /*map*/
 .map2{
-  width: 100%;
+  width: 90%;
   height: 450px;
   border:0;
+}
+iframe {
+  width: 500px;
 }
 .access_content p{
   font-size: 18px;
@@ -1120,7 +1149,7 @@ p.content_copy{
   background-color: green;
   color: #F8F8FF;
   padding: 8px;
-  width: 150px;
+  width: 100px;
   border-radius: 0.5rem;
   margin-bottom: 20px;
   text-align: center;
@@ -1135,7 +1164,7 @@ p.content_copy{
   background-color: green;
   color: #F8F8FF;
   padding: 8px;
-  width: 150px;
+  width: 100px;
   border-radius: 0.5rem;
   margin-bottom: 20px;
   text-align: center;
@@ -1352,7 +1381,84 @@ nav.nav_menu ul ul li{
 .menu_icon div{
   font-size: 12px;
 }
-/* narbar */
+/* navbar */
+
+/* bottom navbar start */
+
+
+.bottom-navbar a:not(:first-child){
+  display: none;
+  }
+  .bottom-navbar a.bottom-icon {
+    float: left;
+    display: block;
+  }
+  .bottom-navbar.bottom-resp a{
+display: block;
+text-align: center;
+float: none;
+
+  }
+  .bottom-navbar.bottom-resp a.bottom-icon{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   padding: 14px 14px;
+   background-color: #00aa9f;
+   height: 53px;
+    width: 55px;
+    z-index: 99;
+      }
+      .bottom-navbar a.bottom-navbar-tel{
+        position: fixed;
+       left: 55px;
+       bottom: 0;
+       background-color: #0090aa;
+       height: 53px;
+        width: 54px;
+        font-size: 25px;
+        z-index: 99;
+      
+          }
+          .bottom-navbar.bottom-resp a.bottom-navbar-bar{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #6ddca3;
+            left: 0px;
+            height: 54px;
+
+          }
+          .bottom-navbar{
+           background-color: #6ddca3;
+              }
+              .bottom-navbar.bottom-resp{
+                background-color: #6ddca3;
+                   }
+          .bottom-navbar a.bottom-navbar-tel:hover{
+        
+           background-color: #e4f2f5;
+          
+              }
+
+          .bottom-navbar.bottom-resp{
+         margin-bottom: 53px;
+              }
+      a.bottom-icon i{
+font-size: 25px;
+      }
+      a.bottom-icon {
+        height: 53px;
+        width: 55px;
+              }
+
+ 
+      .bottom-navbar{
+        display: block;
+      }
+
+
+/* bottom navbar the and */
 
  .container{
   width: 100%;
@@ -1386,15 +1492,12 @@ nav.nav_menu ul ul li{
 .col_50{
   width: 100%;
 }
-.col_3,.col_80{
-  width: 90%;
-  margin-left: 5%;
-}
+
 .col_10{
   width: 90%;
   margin-left: 5%;
 }
-.col_90{
+.col_90,.col_full,.col_3,.col_80{
   width: 90%;
   margin-left: 5%;
 }
@@ -1430,7 +1533,7 @@ nav.nav_menu ul ul li{
   width: 100%;
   margin-top: 30px;
 }
-.bottnav,.title3 img,i,.col_10 img{
+.bottnav,.title3 img,.col_10 img{
   display: none;
 }
 .text-cont{
@@ -1555,6 +1658,9 @@ h2.title4{
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
+.footer{
+margin-bottom: 54px;
+}
 
 .card-text h2{
   font-size: 1.3em;
@@ -1675,6 +1781,13 @@ h3.title:before {
 }
 .header-content-right .col_30,.col_70{
   width: 100%;
+}
+div.box_table_time{
+  background: linear-gradient(#61c02b, #4fd19b);
+  
+}
+.table_time th,td,div.contact p,span{
+  color: white;
 }
 .header-content-right{
 margin-top: 65px;
@@ -1971,9 +2084,89 @@ div.logo img{
 .container,.row,.map{
   width: 100%;
 }
-/*	.wave,.maru,.header_top,.title3 img,i{
-		display: none;
-   }*/
+/* bottom navbar start */
+
+
+.bottom-navbar a:not(:first-child){
+  display: none;
+  }
+  .bottom-navbar a.bottom-icon {
+    float: left;
+    display: block;
+  }
+  .bottom-navbar.bottom-resp a{
+display: block;
+text-align: center;
+float: none;
+
+  }
+  .bottom-navbar.bottom-resp a.bottom-icon{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   padding: 14px 14px;
+   background-color: #00aa9f;
+   height: 53px;
+    width: 55px;
+    z-index: 99;
+      }
+      .bottom-navbar a.bottom-navbar-tel{
+        position: fixed;
+       left: 55px;
+       bottom: 0;
+       background-color: #0090aa;
+       height: 53px;
+        width: 54px;
+        font-size: 25px;
+        z-index: 99;
+      
+          }
+          .bottom-navbar.bottom-resp a.bottom-navbar-bar{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #6ddca3;
+            left: 0px;
+            height: 54px;
+
+          }
+          .bottom-navbar{
+           background-color: #6ddca3;
+              }
+              .bottom-navbar.bottom-resp{
+                background-color: #6ddca3;
+                   }
+          .bottom-navbar a.bottom-navbar-tel:hover{
+        
+           background-color: #e4f2f5;
+          
+              }
+
+          .bottom-navbar.bottom-resp{
+         margin-bottom: 53px;
+              }
+      a.bottom-icon i{
+font-size: 25px;
+      }
+      a.bottom-icon {
+        height: 53px;
+        width: 55px;
+              }
+
+ 
+      .bottom-navbar{
+        display: block;
+      }
+
+
+/* bottom navbar the and */
+.box_table_time_content{
+background-color: #e3e4e3;
+opacity: 0.6;
+}
+.footer{
+  margin-bottom: 54px;
+}
    .img-hover-zoom img{
     width: 100%;
     height: 100%;
@@ -1996,7 +2189,7 @@ div.logo img{
     width: 100%;
 
   }
-  .col_90,.col_80{
+  .col_full,.col_80{
     width: 90%;
     margin-left: 5%;
   }
@@ -2186,7 +2379,23 @@ div.box_table_time{
 div.box_table_time_content{
   overflow-x: auto;
 }
+div.header-content-right .col_70{
+  width: 100%;
+  position: relative;
+  margin-top: 70px;
+}
+div.header-content-right .col_30{
+position: absolute;
+z-index: 1;
+margin-top: 70px;
+width: 50%;
 
+}
+div.box_table_time{
+  background: none;
+
+
+}
 
 
 }

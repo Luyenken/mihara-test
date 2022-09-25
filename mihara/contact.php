@@ -144,12 +144,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</ul>
 	</nav>
 	<!-- navbar end -->
-	<!-- button (mobile,tablet) start -->
-	<div class="box_mobile">
-		<button class="btn_mobile"onclick="location.href='contact.php'"><i class="fa fa-envelope-o" aria-hidden="true"></i>お問い合わせ</button>
-		<button class="btn_mobile" onclick="location.href='../index.html'"><i class="fa fa-home" aria-hidden="true"></i>健伸会</button>
-	</div>
-	<!-- button (mobile,tablet) end -->
+	<!-- bottom memu bar(mobile,tablet) end-->
+	<div class="bottom-navbar" id="bottom-menu">
+		<a class="bottom-navbar-tel" href="tel:81974-62-3850"><i class="fa fa-phone" aria-hidden="true"></i></a>
+		<a href="../index.html">健伸会</a>
+		<a href="../carehome/index.html">ケアホーム五つの実</a>
+		<a href="../careplan/index.html">ケアプランセンターみはら</a>
+		<a href="access.html">アクセス</a>
+		<a href="contact.php">お問い合わせ</a>
+		<a href="javascript:void(0);" class="bottom-icon" onclick="bottom_menu()"><i class="fa fa-home" aria-hidden="true"></i></a>
+		<a class="bottom-navbar-bar"></a>
+		
+	  </div>
+	<!-- bottom memu bar(mobile,tablet) end-->
 	<!-- main start -->
 	<div class="container">
 		<h3 class="title2"><span>お問い合わせ</span></h3>

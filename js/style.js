@@ -11,14 +11,18 @@ function myFunction() {
   }
 }
 
-function menu_nav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+function bottom_menu() {
+  var bottom_navbar = document.getElementById("bottom-menu");
+  if (bottom_navbar.className === "bottom-navbar") {
+    bottom_navbar.className += " bottom-resp";
   } else {
-    x.className = "topnav";
+    bottom_navbar.className = "bottom-navbar";
   }
 }
+
+$('.bottom-icon').click(function() {
+  $(this).find('i').toggleClass('fa-window-close');
+});
 
 function menu_icon(x) {
   x.classList.toggle("change");
@@ -116,9 +120,9 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
