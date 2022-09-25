@@ -233,7 +233,7 @@ background-color: #0090aa;
 object-fit: cover;
 }
 div.box_table_time{
-  background:radial-gradient(#DB245B, #F2D8DF);
+  background: linear-gradient(70deg, rgba(0, 255, 81, 0.477), rgb(209, 237, 219));
   height: 400px;
   display: flex;
   align-items: center;
@@ -301,6 +301,9 @@ div.box_table_time_content{
 }
 .mgt-7{
     margin-top: 7px;
+}
+.mg-btt-50{
+  margin-bottom: 50px;
 }
 /* Left column */
 .leftcol {
@@ -613,11 +616,13 @@ height: 400px;
 }
 .card-text2 {
   float: left;
-  width: 50%;
+  width: 48%;
 }
 .card-img2 {
   float: left;
   width: 50%;
+  height: 250px;
+  position: relative;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
 }
@@ -683,9 +688,9 @@ h2.title9 span{
   object-fit: cover;
 }
 .kiki_img2 {
-  width: 260px;
+  width: 100%;
   height: 250px;
-  margin: 5px;
+  position: absolute;
   object-fit: cover;
 }
 .naika_img2 {
@@ -1054,6 +1059,7 @@ h3.title2 span {
  border-left: solid 5px #009900;
  font-size: 18px;
  margin-bottom: 10px;
+ width: 98%;
 }
 
 /* <======== animation effect START ========>*/
@@ -1104,7 +1110,7 @@ h3.title2 span {
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
   position: fixed;
-  bottom: 50px;
+  bottom: 60px;
   right: 30px;
 
   color: #555;
@@ -1211,7 +1217,7 @@ p.content_copy{
 /* <======== MOBILE AND TABLET START ========>*/
 @media  screen and  (max-width: 1300px) {
   .container{
-    width: 100%;
+    width: 90%;
   }
   .kiki_img2 {
     width: 240px;
@@ -1812,7 +1818,7 @@ div.logo img{
  .header_content{
   font-size: 20px;
 }
-.container,.row,.map{
+.container,.map{
   width: 100%;
 }
 .kiki_img2,.naika_img2{
@@ -1837,13 +1843,10 @@ div.logo img{
 .col_10 img{
   display: none;
 }
-.container,.row{
-  width: 100%;
-}
 .col_50{
   width: 100%;
 }
-.column_30,.col_90,.col_10,.col_80{
+.column_30,.col_90,.col_10,.col_80,.row{
   width: 90%;
   margin-left: 5%;
 }
@@ -1990,6 +1993,7 @@ nav.nav_menu ul{
   width: 100%;
   left: 0px;
   margin-left: 0px;
+ 
 
 }
 div.logo{
@@ -2081,7 +2085,7 @@ div.logo img{
  .header_content{
   font-size: 20px;
 }
-.container,.row,.map{
+.map{
   width: 100%;
 }
 /* bottom navbar start */
@@ -2177,9 +2181,7 @@ opacity: 0.6;
   .bottnav,.col_10 img,.title3 img,i{
     display: none;
   }
-  .container,.row{
-    width: 100%;
-  }
+
 
   .column_30{
     width: 70%;
@@ -2189,7 +2191,7 @@ opacity: 0.6;
     width: 100%;
 
   }
-  .col_full,.col_80{
+  .col_80{
     width: 90%;
     margin-left: 5%;
   }
@@ -2323,11 +2325,16 @@ height: 40px;
 
 }
 .card-text{
-  width: 60%;
+  width: 50%;
 }
 .card-img{
-  float: right;
-  object-fit: cover;
+width: 50%;
+  float: left;
+ 
+}
+.card-img-content{
+width: 100%;
+
 }
 .top {
   margin-top: 0px;

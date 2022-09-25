@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 	<!-- header top start -->
 	<div class="header_top">
-		<img src="../image/logo/logo.jpg">
+	<a href="index.html"><img src="../image/logo/logo_mihara.jpg"></a>
 		<h5 class="title_top">みはらクリニック</h5>
 		<a class="content_toptel" href="">
 			<span><i class="fa fa-volume-control-phone" aria-hidden="true"></i>0974-62-3850</span>
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<!-- wave end -->
 	<!-- navbar start -->
 	<nav class="nav_menu" id="navbar">
-		<div class="logo"><img src="../image/logo/logo.jpg"></div>
+		<div class="logo"><a href="index.html"><img src="../image/logo/logo_mihara.jpg"></a></div>
 		<label for="btn" class="icon">
 			<div class="menu_icon" onclick="menu_icon(this)">
 				<div class="bar1"></div>
