@@ -154,7 +154,7 @@ nav.nav_menu ul li:hover > ul{
 nav.nav_menu ul ul li{
 	position: relative;
 	margin: 0px;
-	width: 150px;
+	width: 200px;
 	float: none;
 	display: list-item;
 	border-bottom:1px solid rgba(0,0,0,0.3);
@@ -621,7 +621,7 @@ height: 400px;
 .card-img2 {
   float: left;
   width: 50%;
-  height: 250px;
+  height: 300px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
@@ -743,7 +743,8 @@ section.card {
 
 /*map*/
 .map2{
-  width: 90%;
+  margin-top: 50px;
+  width: 100%;
   height: 450px;
   border:0;
 }
@@ -754,6 +755,45 @@ iframe {
   font-size: 18px;
 }
 /*button mobile*/
+.title-daycare{
+text-align: center;
+font-size: 25px;
+position: relative;
+margin-top: 60px;
+}
+.title-daycare2{
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  margin-top: 60px;
+  }
+.title-daycare::before{
+  content: "みはらクリニック";
+  text-align: center;
+  font-size: 40px;
+  position: absolute;
+  margin-top: 20px;
+  font-family: luxus-brut, cursive;
+  font-style: italic;
+  z-index: -1;
+  transform: translateX(-50%) rotate(-10deg);
+    color: rgb(233, 108, 108, 0.4);
+    top: -50px;
+    left: 50%;
+  }
+  .osusume-content li:before{
+    content:"·";
+    font-size:120px;
+    vertical-align:middle;
+    line-height:20px;
+  }
+  ul.osusume-content li{
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+   
+      }
+
 .box_mobile {
   display: none;
   position: fixed;
@@ -787,6 +827,109 @@ iframe {
 .btn_mobile:active,
 .btn_mobile:hover {
  opacity: 0.6;
+}
+p.title-day {
+  position: relative;
+  padding: 0.6em;
+  background: #2da061;
+  width: 100px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+p.title-day:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #2da061;
+  width: 0;
+  height: 0;
+}
+
+/* box card daycare*/
+.box-daycare{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  
+  width: 100%;
+ 
+}
+.box-daycare h2{
+  font-size: 20px;
+}
+.box-daycare p{
+  color: #000;
+  font-weight: 700;
+  padding: 5px;
+}
+.box-card-daycare1{
+  width: 350px;
+  height: 350px;
+  border-radius: 3px ;
+  margin: 5px;
+  position: relative;
+  background-image: url('../image/soutai.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, .1);
+
+}
+.box-card-daycare2{
+  width: 350px;
+  height: 350px;
+  border-radius: 3px;
+  margin: 5px;
+  position: relative;
+  background-image: url('../image/hokouki.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, .1);
+
+ 
+}
+.box-card-daycare3{
+  width: 350px;
+  height: 350px;
+  border-radius: 3px;
+  margin: 5px;
+  position: relative;
+  background-image: url('../image/soutai.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, .1);
+  
+}
+.box-daycare span{
+
+font-size: 40px;
+position: absolute;
+margin-top: 40%;
+  color: rgba(37, 7, 7, 0.4);
+margin-left: 170px;
+padding: 15px;
+  background-color: rgb(230, 221, 221);
+transform: translateX(-50%) rotate(-20deg);
+
+
+  
+}
+.box-card-content-daycare{
+position: absolute;
+font-size: 20px;
+width: 200px;
+height: 80%;
+margin-top: 10%;
+margin-left: 10px;
+background-color: #dee6ea;
+opacity: 0.6;
 }
 @media (max-width: 980px) {
   .box_mobile{
@@ -1477,6 +1620,9 @@ font-size: 25px;
 .table_time th,.table_time td,.mihara_history th,.mihara_history td,.table_ryokin th,.table_ryokin td{
   font-size: 15px;
 }
+.mihara_history td{
+  color: #000;
+}
 .mihara_history,.table_ryokin{
  display: block;
  overflow-x: auto;
@@ -1491,7 +1637,11 @@ font-size: 25px;
   width: 90%;
   margin-left: 5%;
 }
-.map,.column_50{
+.card-img-content{
+  height: auto;
+  width: 100%;
+}
+.map,.column_50,.main{
   width: 90%;
   margin-left: 5%;
 }
@@ -1503,10 +1653,29 @@ font-size: 25px;
   width: 90%;
   margin-left: 5%;
 }
-.col_90,.col_full,.col_3,.col_80{
+.col_90,.col_full,.col_3,.col_80,.box-card-daycare1,.box-card-daycare2,.box-card-daycare3{
   width: 90%;
   margin-left: 5%;
 }
+.box-daycare{
+  display: block;
+}
+.daycare-content p{
+margin: 10px;
+}
+ul.osusume-content{
+display: block;
+
+}
+ul.osusume-content li{
+ font-size: 15px;
+  
+  }
+  h2.title-daycare::before{
+    font-size: 22px;
+
+  }
+
 .box_content {
  margin-top: 0px; 
 }
@@ -1584,6 +1753,8 @@ h2.title_mobile{
   font-weight: 600;
   padding: 0;
   margin-bottom: 20px;
+  width: 90%;
+  left: 5%;
 }
 h2.title4{
   font-size: 15px;
@@ -1591,6 +1762,7 @@ h2.title4{
 h3.title2 {
   width: 90%;
   margin-left: 5%;
+  padding: 5px 5px;
 }
 h2.title8,.title8 span{
   font-size: 16px;
@@ -1732,6 +1904,7 @@ margin-bottom: 54px;
   padding: 10px;
   height: 100px;
   text-align: center;
+  color: #000;
 }
 .table h5{
   font-size: 18px;
@@ -1790,7 +1963,7 @@ h3.title:before {
 }
 div.box_table_time{
   background: linear-gradient(#61c02b, #4fd19b);
-  
+ 
 }
 .table_time th,td,div.contact p,span{
   color: white;
@@ -1800,6 +1973,11 @@ margin-top: 65px;
 }
 div.box_table_time{
   height: 250px;
+}
+.table_time td, .table_time th {
+  text-align: center;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
 }
 div.box_img_header_homepage{
   height: 250px;
@@ -2158,7 +2336,7 @@ font-size: 25px;
               }
 
  
-      .bottom-navbar{
+      .bottom-navbar,.osusume-content{
         display: block;
       }
 
@@ -2190,6 +2368,9 @@ opacity: 0.6;
   .col_50{
     width: 100%;
 
+  }
+  .col_3{
+    width: 48%;
   }
   .col_80{
     width: 90%;

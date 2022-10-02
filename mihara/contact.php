@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 0);
 /*変数初期化する*/
 $title_err = $name_err = $fname_err = $tel_err = $mail_err = $content_err = "";
 $title = $name = $fname = $tel = $mail = $content = "";
@@ -36,14 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}else{
 		$content = $_POST["content"];
 	}
-	if ($name != null || $fname != null ||  $mail != null || $title != null || $content != null) {
-		$name = $_POST["name"];
-		$fname = $_POST["fname"];
-		$tel = $_POST["tel"];
-		$mail = $_POST["email"];
-  $title = $_POST["title"]; //メールの件名
-  $content = $_POST["content"];
-  $to = "djluyenken@gmail.com"; //送信先メールアドレス
+
+	if ($name != null && $fname != null &&  $mail != null && $title != null && $content != null) {
+	
+//   $title = $_POST["title"]; //メールの件名
+//   $content = $_POST["content"];
+  $to = ""; //送信先メールアドレス
   $from = "From: $mail\r\n";  //送信元として表示されるメールアドレス
   $from.="Return-Path: $mail";
 //メール本文の作成
@@ -71,8 +70,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -88,30 +85,79 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" href="../image/logo/favicon.ico">
+
+
 </head>
 <body>
-	<!-- header top start -->
+	<!-- header start -->
 	<div class="header_top">
-	<a href="index.html"><img src="../image/logo/logo_mihara.jpg"></a>
-		<h5 class="title_top">みはらクリニック</h5>
-		<a class="content_toptel" href="">
-			<span><i class="fa fa-volume-control-phone" aria-hidden="true"></i>0974-62-3850</span>
-		</a>
-		<a class="content_toptel" >診療時間<span>9:00-17：30</span></a>
+		<a href="index.html"><img src="../image/logo/logo_mihara.jpg"></a>
+		<a class="content_toptel" href="tel:81974-62-3850"><span><i class="fa fa-volume-control-phone" aria-hidden="true"></i>0974-62-3850</span></a>
 		<nav class="nav_top">
 			<ul >
-				<li class="nav_item"><a href="accsess.html"><span>●</span>アクセス</a></li>
-				<li class="nav_item"><a href="contact.html"><span>●</span>お問い合わせ</a></li>
-				<li class="nav_item"><a href="../index.html"><span>●</span>健伸会</a></li>
+				<li class="nav_item"><a href="../index.html">健伸会</a></li>
+				<li class="nav_item"><a href="../carehome/index.html">ケアホーム五つの実</a></li>
+				<li class="nav_item"><a href="../careplan/index.html">ケアプランセンターみはら</a></li>
+				<li class="nav_item"><a href="access.html">アクセス</a></li>
+				<li class="nav_item"><a href="contact.php">お問い合わせ</a></li>
+				
 			</ul>
 		</nav>
 	</div>
-	<!-- header top end -->
+	<!-- header end -->
 	<!-- wave start -->
-	<section class="waves">
-		<div class="wave"></div>
-		<div class="title"><h2><span>みはらクリニック</span></h2></div>
-	</section>
+<div class="header-content-right">
+		<div class="row">
+<div class="col_30">
+	<div class="box_table_time">
+		<div class="box_table_time_content">
+	<table class="table_time">
+		<tr><th>診療時間</th>
+			<td>月</td>
+			<td>火</td>
+			<td>水</td>
+			<td>木</td>
+			<td>金</td>
+			<td>土</td>
+			<td>日</td>
+		</tr>
+		<tr><th>9:00~12:30</th>
+			<td>●</td>
+			<td>●</td>
+			<td>●</td>
+			<td>●</td>
+			<td>●</td>
+			<td>●</td>
+			<td>×</td>
+		</tr>
+		<tr><th>14:00~17:30</th>
+			<td>●</td>
+			<td>●</td>
+			<td>●</td>
+			<td>×</td>
+			<td>●</td>
+			<td>●</td>
+			<td>×</td>
+		</tr>
+	</table>
+	<div class="contact">
+		<p>受付時間　8:30 - 17:30</p>
+		<p>※土曜日午後　14:00 - 16:30</p>
+		<p>休 診 日 <span style="margin-left: 15px;">木曜午後・日祝日・お盆・年末年始</span></p>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="col_70">
+	<div class="box_img_header_homepage">
+	<img src="../image/mihara_home.JPG">
+	</div>
+</div>
+		</div>
+	</div>
+
+
 	<!-- wave end -->
 	<!-- navbar start -->
 	<nav class="nav_menu" id="navbar">
@@ -126,26 +172,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</label>
 		<input class="checkbox" type="checkbox" id="btn" name="">
 		<ul>
-			<li><p class="maru">●</p><a href="index.html">トップページ</a></li>
-			<li>
-				<p class="maru">●</p><a href="doctor.html">医師紹介</a>
-			</li>
-			<li><p class="maru">●</p>
-				<label for="btn-1"class="show">診療科+</label>
-				<a href="section.html">診療科 </a>
+			<li><a href="index.html">トップページ</a></li>
+			<li><a href="doctor.html">医師紹介</a></li>
+			<li></p>
+				<label for="btn-1"class="show">リハビリ+</label>
+				<a href="">リハビリ</a>
 				<input class="checkbox" type="checkbox" id="btn-1" >
 				<ul>
-					<li><a href="medical1.html">整形外科</a></li>
-					<li><a href="medical2.html">内科</a></li>
-					<li><a href="medical3.html">リハビリ科</a></li>
+					<li><a href="tuusyo.html">通所</a></li>
+					<li><a href="houmon.html">訪問</a></li>
+					<li><a href="daycare.html">デイケア</a></li>
+					<li><a href="rehabilitation.html">リハビリテーション</a></li>
 				</ul>
 			</li>
-			<li><p class="maru">●</p><a href="device.html">検査機器</a></li>
+			<li><a href="medical2.html">内科</a></li>
+			<li><a href="device.html">検査機器</a></li>
 		</ul>
 	</nav>
-	<!-- navbar end -->
-	<!-- bottom memu bar(mobile,tablet) end-->
-	<div class="bottom-navbar" id="bottom-menu">
+<!-- bottom memu bar(mobile,tablet) end-->
+	  <div class="bottom-navbar" id="bottom-menu">
 		<a class="bottom-navbar-tel" href="tel:81974-62-3850"><i class="fa fa-phone" aria-hidden="true"></i></a>
 		<a href="../index.html">健伸会</a>
 		<a href="../carehome/index.html">ケアホーム五つの実</a>
@@ -162,8 +207,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<h3 class="title2"><span>お問い合わせ</span></h3>
 		<div class="box_con">
 			<?php if($msg_Success){?>
-				<div class="alert">
-					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+				<div class="alert" id="myDIV" style="display:block;">
+					<a   href="contact.php" ><span class="closebtn"  onclick="this.parentElement.style.display='none';">&times;</span></a>
 					<?= $msg_Success?>
 				</div>
 			<?php }elseif ($msg_err) {?>
@@ -173,37 +218,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 			<?php } ?>
 			<p><span>必須</span>は必須入力です。</p>
-			<form method="post" >
+		
+			
+			<form action="contact.php" method="post">
 				<table class="formTable">
 					<tr>
 						<th>ご用件<span>必須</span></th>
 						<td>
-							<input size="20" type="text" name="title">
+							<input size="20" type="text" name="title" value="<?php echo $title; ?>">
 							<span class="err"><?php echo $title_err; ?></span></td>
 						</tr>
 						<tr>
 							<th>お名前<span>必須</span></th>
-							<td><input size="20" type="text" name="name" /><span class="err"><?php echo $name_err; ?></span></td>
+							<td><input size="20" type="text" name="name" value="<?php echo $name; ?>"/><span class="err"><?php echo $name_err; ?></span></td>
 						</tr>
 						<tr>
 							<th>ふりがな<span>必須</span></th>
-							<td><input size="20" type="text" name="fname" /><span class="err"><?php echo $fname_err; ?></span></td>
+							<td><input size="20" type="text" name="fname"  value="<?php echo $fname; ?>" /><span class="err"><?php echo $fname_err; ?></span></td>
 						</tr>
 						<tr>
 							<th>電話番号</th>
-							<td><input size="30" type="text" name="tel" /></td>
+							<td><input size="30" type="number" pattern="[0-9]"  onKeyPress="if(this.value.length==12) return false;" oninput="this.value = this.value.replace(/(\..*?)\..*/g, '$1');" name="tel"  value="<?php echo $tel; ?>" /></td>
 						</tr>
 						<tr>
 							<th>Eメール<span>必須</span></th>
-							<td><input size="30" type="email" name="email" /><span class="err"><?php echo $mail_err; ?></span></td>
+							<td><input size="30" type="email" name="email"  value="<?php echo $mail; ?>" /><span class="err"><?php echo $mail_err; ?></span></td>
 						</tr>
 						<tr>
 							<th>お問い合わせ内容<span>必須</span><br /></th>
-							<td><textarea name="content" cols="50" rows="5"></textarea><span class="err"><?php echo $content_err; ?></span></td>
+							<td><textarea name="content" cols="50" rows="5"  ><?php echo $content; ?></textarea><span class="err"><?php echo $content_err; ?></span></td>
 						</tr>
 					</table>
 					<div class="box_btn_contact">
-						<input class="btn_contact" type="submit"　name="sub" value="送信する" />
+						<input class="btn_contact" type="submit" name="sub" value="送信する" />
 
 					</div>
 				</form>
